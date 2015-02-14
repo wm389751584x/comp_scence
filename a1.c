@@ -90,18 +90,49 @@ int main(void) {
 	mean1 /= bin_count;
 	mean2 /= bin_count;
 	mean3 /= bin_count;
+	printf("bin1: ");
 	for (j = 0; j < bin_count; j++) {
-		printf("bin%d: %f", i, bin1[j]);
+		printf("%.4f ", mean1);
 	}
 	printf("\n");
+	printf("bin2: ");
 	for (j = 0; j < bin_count; j++) {
-		printf("bin%d: %f", i, bin2[j]);
+		printf("%.4f ", mean2);
 	}
 	printf("\n");
+	printf("bin3: ");
 	for (j = 0; j < bin_count; j++) {
-		printf("bin%d: %f", i, bin3[j]);
+		printf("%.4f ", mean3);
 	}
 	printf("\n");
+	printf("b.\n");
+	int lbn1 = 13, hbn1 = 22, lbn2 = 22, hbn2 = 35, lbn3 = 35, hbn3 = 70;
+	printf("bin1: ");
+	for (i = 0; i < bin_count; i++) {
+		if (bin1[i] - lbn1 <= hbn1 - bin1[i])
+			printf("%d ", lbn1);
+		else
+			printf("%d ", hbn1);
+	}
+	printf("\n");
+	printf("bin2: ");
+	for (i = 0; i < bin_count; i++) {
+		if (bin2[i] - lbn2 <= hbn2 - bin2[i])
+			printf("%d ", lbn2);
+		else
+			printf("%d ", hbn2);
+	}
+	printf("\n");
+	printf("bin3: ");
+	for (i = 0; i < bin_count; i++) {
+		if (bin3[i] - lbn3 <= hbn3 - bin3[i])
+			printf("%d ", lbn3);
+		else
+			printf("%d ", hbn3);
+	}
+	printf("\n");
+	printf("c.\n");
+
 	return 0;
 
 }
