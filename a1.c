@@ -132,7 +132,22 @@ int main(void) {
 	}
 	printf("\n");
 	printf("c.\n");
-
+	list_t raw_list;
+	init(&raw_list);
+	int * a;
+	for (i = 0; i < count; i++) {
+		raw_insert(&raw_list, age[i]);
+	}
+	a = set_width(&raw_list);
+//	for (i = 0; i < 8; i++) {
+//		printf("count: %d\n", *(a + i));
+//	}
+	for (i = 0; i < 8; i++) {
+		for (j = 0; j < *(a + i); j++) {
+			printf();
+		}
+	}
 	return 0;
+
 
 }
